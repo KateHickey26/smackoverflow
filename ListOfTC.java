@@ -1,7 +1,5 @@
 import java.util.ArrayList;
 
-//import java.rmi.registry.LocateRegistry;
-
 public class ListOfTC{
     
     protected String courseID;
@@ -40,7 +38,7 @@ public class ListOfTC{
         return listOfTC;
     }
 
-    public String getcourseID(){
-        return courseID;
-    }
+    // public String getcourseID(){
+    //     return courseID;
+    // }
 }
