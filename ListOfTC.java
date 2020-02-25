@@ -15,22 +15,12 @@ public class ListOfTC{
 
     // adds a training course to the array list
     protected void addCourse(TrainingCourse trainingCourse){
-        for(int i = 0; i<listOfTC.size(); i++){
-            if(listOfTC.get(i)==null){
                 listOfTC.add(trainingCourse);
-                //break; 
-            }
-        }
     }
 
     // removes a training course from the array list
     public void removeCourse(TrainingCourse trainingCourse){
-        for(int i = 0; i< listOfTC.size(); i++) {
-            if (listOfTC.get(i) == trainingCourse) {
-                listOfTC.remove(i);
-                //break;
-            }
-        }
+                listOfTC.remove(trainingCourse);
     }
 
     // getters
