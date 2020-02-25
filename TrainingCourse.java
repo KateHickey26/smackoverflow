@@ -1,14 +1,16 @@
+import java.util.ArrayList;
 
-public class TrainingCourse{
+public class TrainingCourse {
     
-    protected String courseID;
-    protected String courseName;
-    protected ArrayList<Teacher> ListOfTeachersEnrolled;
+    private String courseID;
+    private String courseName;
+    private ArrayList<Teacher> ListOfTeachers;
 
     // constructor
     protected TrainingCourse(String name, String ID){
         ID = courseID;
         name = courseName;
+        ListOfTeachers = new ArrayList<Teacher>;
     }
 
     // getters
@@ -20,7 +22,7 @@ public class TrainingCourse{
         return courseName;
     }
 
-    public <Stirng> getListOfTC(){
-        return ListOfTC;
+    public ArrayList<Teacher> getListOfTeachers(){
+        return ListOfTeachers;
     }
 }
