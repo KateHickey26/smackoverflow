@@ -1,4 +1,4 @@
-package Person;
+package model;
 
 public class Person {
 
