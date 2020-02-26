@@ -1,14 +1,15 @@
+package model;
+
 import java.util.ArrayList;
 
-public class ListOfTC{
-    
+public class LoTrainingCourses{
     protected String courseID;
     protected ArrayList<TrainingCourse> listOfTC;
     protected int numOfCourses;
 
     // list constructor
-    // passed an int, for number of indicies?
-    ListOfTC(int numOfCourses) {
+    // passed an int, for number of indices?
+    LoTrainingCourses(int numOfCourses) {
         listOfTC = new ArrayList<TrainingCourse>(numOfCourses);
     }
 

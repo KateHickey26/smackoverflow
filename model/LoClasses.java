@@ -1,10 +1,12 @@
+package model;
+
 import java.util.ArrayList;
 
 // List of Classes
-public class Loc {
+public class LoClasses {
 	private ArrayList<Class> classes;
 	
-	public Loc() {
+	public LoClasses() {
 		this.classes = new ArrayList<Class>();
 	}
 	

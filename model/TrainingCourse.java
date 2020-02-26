@@ -1,3 +1,5 @@
+package model;
+
 import java.util.ArrayList;
 
 public class TrainingCourse {
@@ -10,15 +12,15 @@ public class TrainingCourse {
     protected TrainingCourse(String name, String ID){
         ID = courseID;
         name = courseName;
-        ListOfTeachers = new ArrayList<Teacher>;
+        ListOfTeachers = new ArrayList<Teacher>();
     }
 
     // getters
-    public String getcourseID(){
+    public String getCourseID(){
         return courseID;
     }
 
-    public String getcourseName(){
+    public String getCourseName(){
         return courseName;
     }
 
