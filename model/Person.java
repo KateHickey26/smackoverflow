@@ -1,14 +1,16 @@
-package model;
+package Person;
 
 public class Person {
-	protected String name;
-	protected Person(String name) {
-		this.name = name;
-	}
-	public String getName() {
-		return name;
-	}
-	public String toString() {
-		return this.getName();
-	}
+
+    private String name;
+
+    public Person(String name) {
+        this.name = name;
+
+    }
+
+    public String getName() {
+        return name;
+    }
+
 }
