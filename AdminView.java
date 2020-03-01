@@ -10,16 +10,16 @@ import javax.swing.JLabel;
 import javax.swing.JPanel;
 import javax.swing.JTextField;
 
-import model.LoClasses;
+import model.LoCourses;
 import model.LoTeachers;
 import model.Teacher;
 
 public class AdminView extends JFrame implements ActionListener {
 	JFrame frame;
 	LoTeachers teachers;
-	LoClasses classes;
+	LoCourses classes;
 	
-	public AdminView(LoTeachers teachers, LoClasses classes) {
+	public AdminView(LoTeachers teachers, LoCourses classes) {
 		this.teachers = teachers;
 		this.classes = classes;
 		
