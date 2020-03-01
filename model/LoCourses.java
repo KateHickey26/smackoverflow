@@ -3,10 +3,10 @@ package model;
 import java.util.ArrayList;
 
 // List of Classes
-public class LoClasses {
+public class LoCourses {
 	private ArrayList<Course> classes;
 	
-	public LoClasses() {
+	public LoCourses() {
 		this.classes = new ArrayList<Course>();
 	}
 	
