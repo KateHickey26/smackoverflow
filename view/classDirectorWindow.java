@@ -16,6 +16,7 @@ public class ClassDirectorWindow extends JFrame {
     private JLabel update;
 
     public ClassDirectorWindow() {
+        this.setTitle("ClassDirector");
         main = new JPanel();
         main.setBorder(new EmptyBorder(30, 30, 30, 30));
         this.setDefaultCloseOperation(3);
@@ -26,6 +27,7 @@ public class ClassDirectorWindow extends JFrame {
         JPanel bottom = new JPanel();
         middle.setLayout(new GridLayout(1, 2));
         top.setLayout(new GridLayout(2, 1));
+        bottom.setLayout(new GridLayout(1, 1));
         addClass = new JButton("Add Class");
         addClass.setFont(new Font("Arial", Font.PLAIN, 18));
         signOut = new JButton("Sign Out");
@@ -39,6 +41,7 @@ public class ClassDirectorWindow extends JFrame {
         top.add(info);
         top.add(idTextBox);
         update = new JLabel();
+        update.setFont(new Font("Arial", Font.PLAIN, 18));
         bottom.add(update);
         main.add(top);
         main.add(middle);
