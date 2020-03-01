@@ -9,10 +9,12 @@ import javax.swing.JPanel;
 import javax.swing.JTextField;
 import javax.swing.border.EmptyBorder;
 
-public class classDirectorWindow extends JFrame{
+public class ClassDirectorWindow extends JFrame{
     JPanel main;
+    JButton addClass, signOut;
+    JTextField idTextBox;
 
-    public classDirectorWindow() {
+    public ClassDirectorWindow() {
         main = new JPanel();
         main.setBorder(new EmptyBorder(30, 30, 30, 30));
         this.setDefaultCloseOperation(3);
@@ -22,15 +24,15 @@ public class classDirectorWindow extends JFrame{
         JPanel bottom = new JPanel();
         bottom.setLayout(new GridLayout(1,2));
         top.setLayout(new GridLayout(2,1));
-        JButton addClass = new JButton("Add Class");
+        addClass = new JButton("Add Class");
         addClass.setFont(new Font("Arial", Font.PLAIN, 18));
-        JButton signOut = new JButton("Sign Out");
+        signOut = new JButton("Sign Out");
         signOut.setFont(new Font("Arial", Font.PLAIN, 18));
         bottom.add(addClass);
         bottom.add(signOut);
         JLabel info = new JLabel("Class to be Filled:");
         info.setFont(new Font("Arial", Font.PLAIN, 20));
-        JTextField idTextBox = new JTextField("Enter Class ID. (eg. MATH201)", 30);
+        idTextBox = new JTextField("Enter Class ID. (eg. MATH201)", 30);
         idTextBox.setFont(new Font("Arial", Font.PLAIN, 18));
         top.add(info);
         top.add(idTextBox);
@@ -41,5 +43,14 @@ public class classDirectorWindow extends JFrame{
         this.add(main);
         this.pack();
         this.setVisible(true);
+    }
+    public JButton getAddClassButton(){
+        return addClass;
+    }
+    public JButton getSignOutButton(){
+        return signOut;
+    }
+    public JTextField getClassIDText(){
+        return idTextBox;
     }
 }

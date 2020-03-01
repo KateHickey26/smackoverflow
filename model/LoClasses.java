@@ -4,37 +4,35 @@ import java.util.ArrayList;
 
 // List of Classes
 public class LoClasses {
-	private ArrayList<Class> classes;
+	private ArrayList<Course> classes;
 	
 	public LoClasses() {
-		this.classes = new ArrayList<Class>();
+		this.classes = new ArrayList<Course>();
 	}
 	
-	public ArrayList<Class> getClasses() {
+	public ArrayList<Course> getClasses() {
 		return this.classes;
 	}
 	
-	public void add(Class c) {
+	public void add(Course c) {
 		this.classes.add(c);
 	}
 	
-	public void remove(Class c) {
+	public void remove(Course c) {
 		this.classes.remove(c);
 	}
 	
-	public Class find(int id) {
-		Class found = null;
-		for (Class c : classes) {
-			if (c.getClassID() == id) {
-				found = c;
-				break;
+	public Course find(String courseName) {
+		for (Course c : classes) {
+			if (c.getName().equals(courseName)) {
+				return c;
 			}
 		}
-		return found;
+		return null;
 	}
 	
 	public void print() {
-		for (Class c : classes) {
+		for (Course c : classes) {
 			System.out.println(c);
 		}
 	}

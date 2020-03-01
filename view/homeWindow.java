@@ -10,10 +10,12 @@ import javax.swing.border.EmptyBorder;
 import java.awt.Font;
 import java.awt.GridLayout;
 
-public class homeWindow extends JFrame {
+public class HomeWindow extends JFrame {
     JPanel main;
+    JButton signIn;
+    JTextField idTextBox;
 
-    public homeWindow() {
+    public HomeWindow() {
         main = new JPanel();
         this.setDefaultCloseOperation(3);
         this.setResizable(true);
@@ -24,12 +26,12 @@ public class homeWindow extends JFrame {
         JPanel bottom = new JPanel();
         bottom.setLayout(new GridLayout(1,1));
         bottom.setBorder(new EmptyBorder(0, 60, 0, 60));
-        JButton signIn = new JButton("Sign In");
+        signIn = new JButton("Sign In");
         signIn.setFont(new Font("Arial", Font.PLAIN, 20));
         bottom.add(signIn);
         JLabel info = new JLabel("Sign in ID:");
         info.setFont(new Font("Arial", Font.PLAIN, 20));
-        JTextField idTextBox = new JTextField("Enter ID number here (eg. 232)", 30);
+        idTextBox = new JTextField("Enter ID number here (eg. 232)", 30);
         idTextBox.setFont(new Font("Arial", Font.PLAIN, 18));
         top.add(info);
         top.add(idTextBox);
@@ -40,4 +42,12 @@ public class homeWindow extends JFrame {
         this.pack();
         this.setVisible(true);
     }
+
+    public JButton getSignInButton(){
+        return signIn;
+    }
+    public JTextField getIdText(){
+        return idTextBox;
+    }
+
 }

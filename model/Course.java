@@ -1,18 +1,11 @@
 package model;
 
-public class Class {
-	private int classID;
+public class Course {
 	private String name;
 	private Teacher teacher;
 
-	public Class(int id, String name, Teacher teacher) {
-		this.classID = id;
-		this.teacher = teacher;
+	public Course(String name) {
 		this.name = name;
-	}
-	
-	public int getClassID() {
-		return this.classID;
 	}
 	
 	public String getName() {
@@ -29,7 +22,5 @@ public class Class {
 	
 	public String toString() {
 		return this.getName();
-	}
-	
-	
+	}	
 }
