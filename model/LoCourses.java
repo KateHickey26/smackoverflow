@@ -14,7 +14,7 @@ public class LoCourses {
 		return this.classes;
 	}
 	
-	public void add(Course c) {
+	public void addCourse(Course c) {
 		this.classes.add(c);
 	}
 	

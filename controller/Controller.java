@@ -16,11 +16,11 @@ public class Controller implements ActionListener {
     private LoCourses lCourses;
 
     public Controller() {
+        lCourses = new LoCourses();
         homeWindow = new HomeWindow();
         signInButton = homeWindow.getSignInButton();
         signInButton.addActionListener(this);
         homeIdTextField = homeWindow.getIdText();
-        lCourses = new LoCourses();
     }
 
     public void signIn(String idNo) {
@@ -41,11 +41,13 @@ public class Controller implements ActionListener {
         
     }
     public void classDirector(){
+        cdWindow = new ClassDirectorWindow();
         cdAddClassButton = cdWindow.getAddClassButton();
         cdAddClassButton.addActionListener(this);
         cdSignOutButton = cdWindow.getSignOutButton();
         cdSignOutButton.addActionListener(this);
         cdIdTextField = cdWindow.getClassIDText();
+        cdUpdateLabel = cdWindow.getUpdateLabel();
     }
     public void admin(){
 
@@ -55,7 +57,7 @@ public class Controller implements ActionListener {
 
     }
     public void addClass(String courseName){
-        lCourses.add(new Course(courseName));
+        lCourses.addCourse(new Course(courseName));
         cdUpdateLabel.setText("course " + courseName + " added");
         cdIdTextField.setText("Enter Class ID. (eg. MATH201)");
     }
