@@ -142,12 +142,11 @@ public class Controller implements ActionListener {
         File file = new File("TeachersClasses.txt");
         FileOutputStream fileOut = new FileOutputStream(file);
         BufferedWriter bw = new BufferedWriter(new OutputStreamWriter(fileOut));
-
-
-        bw.write(teacherName + " " + assignedCourse);
-        bw.newLine();
-
+        for(Teacher teacher : lTeachers.getListOfTeachers()){
+            //assignedCourse = hasmap.get(teacher);
+            bw.write(teacher + " " + assignedCourse);
+            bw.newLine();
+        }
         bw.close();
-
     }
 }
