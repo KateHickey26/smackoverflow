@@ -16,4 +16,9 @@ public class LoTeachers {
     public void addTeacher(Teacher teacher){
         listOfTeachers.add(teacher);
     }
+    public void printTeacher(){
+        for(int i = 0; i< listOfTeachers.size(); i++){
+            System.out.println(listOfTeachers.get(i));
+        }
+    }
 }

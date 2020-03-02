@@ -16,7 +16,7 @@ public class ClassDirectorWindow extends JFrame {
     private JLabel update;
 
     public ClassDirectorWindow() {
-        this.setTitle("Class Director");
+        this.setTitle("ClassDirector");
         main = new JPanel();
         main.setBorder(new EmptyBorder(30, 30, 30, 30));
         this.setDefaultCloseOperation(3);

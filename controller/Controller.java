@@ -4,6 +4,10 @@ import view.*;
 import model.*;
 import java.awt.event.ActionEvent;
 import java.awt.event.ActionListener;
+import java.io.File;
+import java.io.FileNotFoundException;
+import java.util.Scanner;
+
 import javax.swing.JButton;
 import javax.swing.JLabel;
 import javax.swing.JTextField;
@@ -15,6 +19,7 @@ public class Controller implements ActionListener {
     private HomeWindow homeWindow;
     private ClassDirectorWindow cdWindow;
     private LoCourses lCourses;
+    private LoTeachers lTeachers;
 
     public Controller() {
         /**
@@ -22,6 +27,13 @@ public class Controller implements ActionListener {
          * in button
          */
         lCourses = new LoCourses();
+        lTeachers = new LoTeachers();
+        try {
+            readFileIn("PermanentInfo.txt");
+        } catch (FileNotFoundException e) {
+            e.printStackTrace();
+        }
+        lTeachers.printTeacher();
         homeWindow = new HomeWindow();
         signInButton = homeWindow.getSignInButton();
         signInButton.addActionListener(this);
@@ -107,4 +119,13 @@ public class Controller implements ActionListener {
 
     }
 
+    public void readFileIn(String fileName) throws FileNotFoundException {
+        Scanner scanner = new Scanner(new File(fileName));
+        scanner.nextLine();
+        while (scanner.hasNextLine()) {
+            lTeachers.addTeacher(new Teacher(scanner.next()));
+            scanner.nextLine();
+
+        }
+    }
 }

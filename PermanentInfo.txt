@@ -1,0 +1,6 @@
+Teacher, Class Assigned to
+Mark    MATH
+Chris   ENGLISH
+Kate    MATH
+Meredith    FRENCH
+Gareth  CRYPTO

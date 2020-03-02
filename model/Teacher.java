@@ -26,9 +26,6 @@ public class Teacher extends Person{
     public int getIDNumber(){
         return this.iDNumber;
     }
-    public String getName() {
-        return this.name;
-    }
 
     public ArrayList<TrainingCourse> getCoursesTrainedFor() {
         return this.coursesTrainedFor;
