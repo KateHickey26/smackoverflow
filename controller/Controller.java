@@ -4,9 +4,13 @@ import view.*;
 import model.*;
 import java.awt.event.ActionEvent;
 import java.awt.event.ActionListener;
-import java.io.File;
 import java.io.FileNotFoundException;
 import java.util.Scanner;
+import java.io.BufferedWriter;
+import java.io.File;
+import java.io.FileOutputStream;
+import java.io.IOException;
+import java.io.OutputStreamWriter;
 
 import javax.swing.JButton;
 import javax.swing.JLabel;
@@ -20,6 +24,8 @@ public class Controller implements ActionListener {
     private ClassDirectorWindow cdWindow;
     private LoCourses lCourses;
     private LoTeachers lTeachers;
+    private Teacher teacherName;
+    private Course assignedCourse;
 
     public Controller() {
         /**
@@ -119,6 +125,7 @@ public class Controller implements ActionListener {
 
     }
 
+
     public void readFileIn(String fileName) throws FileNotFoundException {
         Scanner scanner = new Scanner(new File(fileName));
         scanner.nextLine();
@@ -127,5 +134,20 @@ public class Controller implements ActionListener {
             scanner.nextLine();
 
         }
+
+    /* 
+    * 
+    */
+    public void writeToFile() throws IOException {
+        File file = new File("TeachersClasses.txt");
+        FileOutputStream fileOut = new FileOutputStream(file);
+        BufferedWriter bw = new BufferedWriter(new OutputStreamWriter(fileOut));
+
+
+        bw.write(teacherName + " " + assignedCourse);
+        bw.newLine();
+
+        bw.close();
+
     }
 }
